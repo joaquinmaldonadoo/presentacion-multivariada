@@ -2,7 +2,7 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Perfiles de futbolistas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
 <script>/**
 * plotly.js v2.35.2
 * Copyright 2012-2024, Plotly, Inc.
@@ -20,13 +20,13 @@
   --def:#9b2335; --med:#8aa0bd; --del:#2f6db5;
   --c1:#062f87; --c2:#5f93d3; --c3:#c3912c; --c4:#9b2335;
   --ok:#062f87; --mid:#c3912c; --bad:#9b2335;
-  --f-disp:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-disp:"Montserrat","Segoe UI",Arial,sans-serif;
+  --f-body:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Montserrat",system-ui,"Segoe UI",sans-serif;
   color-scheme:light;
 }
 html,body{height:100%}
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);overflow:hidden}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);overflow:hidden;font-variant-numeric:tabular-nums}
 .deck{position:fixed;inset:0;display:grid;place-items:center;background:var(--paper)}
 .stage{position:relative;width:min(100vw,177.78vh);aspect-ratio:16/9;font-size:min(1vw,1.7778vh);background:var(--paper);overflow:hidden}
 .slide{position:absolute;inset:0;padding:3.6em 4.6em 4.2em;display:none;flex-direction:column;gap:1.6em}
@@ -34,10 +34,10 @@ body{background:var(--paper);color:var(--ink);font-family:var(--f-body);overflow
 .stage::before{content:"";position:absolute;left:0;right:0;top:0;height:.55em;background:var(--band);z-index:3}
 .stage::after{content:"";position:absolute;left:0;top:.55em;width:9em;height:.3em;background:var(--gol);z-index:3}
 @keyframes in{from{opacity:0;transform:translateY(.6em)}to{opacity:1;transform:none}}
-.eyebrow{font-family:var(--f-mono);font-size:1.05em;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.eyebrow{font-family:var(--f-mono);font-size:1.05em;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 h1,h2{font-family:var(--f-disp);font-weight:700;margin:0;text-wrap:balance;letter-spacing:-.015em;color:var(--accent)}
-h2{font-size:3.3em;line-height:1.02}
-.lead{font-size:1.55em;color:var(--muted);margin:0;max-width:62ch;line-height:1.4}
+h2{font-size:2.9em;line-height:1.08}
+.lead{font-size:1.45em;color:var(--muted);margin:0;max-width:62ch;line-height:1.4}
 .head{display:flex;flex-direction:column;gap:.5em}
 .row{display:flex;gap:2em;min-height:0;flex:1}
 .col{display:flex;flex-direction:column;gap:1em;min-width:0}
@@ -70,7 +70,7 @@ svg text{font-family:var(--f-body)}
 .cover-txt{position:relative;display:flex;flex-direction:column;gap:1.4em;max-width:62em}
 .cover-logo{height:6.2em;width:auto;align-self:flex-start;margin-bottom:.6em}
 .corner-logo{position:absolute;top:2.4em;right:4.6em;height:2.7em;width:auto;z-index:4}
-.cover-txt h1{font-size:5.8em;line-height:1}
+.cover-txt h1{font-size:5em;line-height:1.02;font-weight:800}
 .cover-meta{display:flex;gap:3em;font-size:1.3em;color:var(--muted);flex-wrap:wrap}
 .cover-meta b{display:block;color:var(--ink);font-weight:600;margin-bottom:.2em}
 
@@ -78,21 +78,21 @@ svg text{font-family:var(--f-body)}
 .bets{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4em;flex:1;min-height:0}
 .bet{background:var(--panel);border:1px solid var(--line);border-radius:.5em;padding:1.4em 1.4em 1.6em;display:flex;flex-direction:column;gap:.8em;position:relative}
 .bet .id{font-family:var(--f-mono);color:var(--accent);font-size:1.15em}
-.bet p{margin:0;font-size:1.75em;line-height:1.35}
+.bet p{margin:0;font-size:1.6em;line-height:1.35}
 .bet .tech{font-size:1.15em;color:var(--muted);margin-top:auto;padding-right:5em}
 .stamp{position:absolute;bottom:1em;right:1em;width:3.2em;height:3.2em;border-radius:50%;border:2px dashed var(--faint);display:grid;place-items:center;font-family:var(--f-disp);font-size:1.3em;color:var(--faint)}
 .qbox{border-left:.3em solid var(--gol);padding:.2em 0 .2em 1.2em}
-.qbox p{margin:0;font-family:var(--f-disp);font-size:2.3em;line-height:1.18;font-weight:600;color:var(--ink)}
+.qbox p{margin:0;font-family:var(--f-disp);font-size:2em;line-height:1.18;font-weight:600;color:var(--ink)}
 
 /* 3 cartas */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4em;flex:1;min-height:0}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:.6em;padding:1.3em 1.3em 1.3em;display:flex;flex-direction:column;gap:.6em;justify-content:space-between}
 .card .top{display:flex;justify-content:space-between;align-items:flex-start}
-.card .nm{font-family:var(--f-disp);font-size:2.2em;font-weight:700;line-height:1}
+.card .nm{font-family:var(--f-disp);font-size:1.9em;font-weight:700;line-height:1}
 .card .sub{font-size:1.05em;color:var(--muted);margin-top:.3em}
 .card .ovr{font-family:var(--f-disp);font-size:2.6em;font-weight:700;color:var(--gol);line-height:1;text-align:right}
 .card .ovr small{display:block;font-family:var(--f-mono);font-size:.32em;color:var(--muted);letter-spacing:.1em}
-.attr{display:grid;grid-template-columns:7.6em 1fr 2em;align-items:center;gap:.6em;font-size:1.12em}
+.attr{display:grid;grid-template-columns:8.6em 1fr 2em;align-items:center;gap:.5em;font-size:1.02em}
 .attr .bar{height:.7em;background:var(--accent-soft);border-radius:.4em;overflow:hidden}
 .attr .bar span{display:block;height:100%;width:0;background:var(--accent);border-radius:.4em;transition:width .9s cubic-bezier(.2,.8,.2,1)}
 .slide.active .attr .bar span{width:var(--w)}
@@ -456,7 +456,7 @@ function el(tag, attrs={}, parent){ const e=document.createElementNS(NS,tag); fo
 function txt(parent,x,y,s,attrs={}){ const t=el('text',Object.assign({x,y},attrs),parent); t.textContent=s; return t; }
 const GOL=new Set(['Definición','Tiro lejano','Posicionamiento','Voleas']), JUE=new Set(['Pase corto','Control','Centros']);
 const PLOTCFG={displayModeBar:false,responsive:true};
-const FF='IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif'; const FONT={family:FF,color:css('--ink')};
+const FF='Montserrat, system-ui, -apple-system, Segoe UI, sans-serif'; const FONT={family:FF,color:css('--ink')};
 
 /* ---------- Motor de diapositivas ---------- */
 const slides=[...document.querySelectorAll('.slide')];
@@ -501,7 +501,7 @@ hooks.cover={enter(){ const c=document.getElementById('coverCanvas'), r=c.getBou
   const sx=v=>W*0.40+(v+8.6)/17.6*W*0.54, sy=v=>H*0.46-(v)/9*H*0.85;
   g.clearRect(0,0,W,H);
   for(let i=0;i<X.length;i++){ g.fillStyle=POSC[P[i]]; g.globalAlpha=.2; g.beginPath(); g.arc(sx(X[i]),sy(Y[i]),1.6,0,6.3); g.fill(); }
-  g.globalAlpha=1; g.font='600 '+Math.max(11,W*0.0105)+'px IBM Plex Sans, sans-serif';
+  g.globalAlpha=1; g.font='600 '+Math.max(11,W*0.0105)+'px Montserrat, sans-serif';
   D.cracks.forEach((k,i)=>{ const p=D.cracks_pca[i]; const x=sx(p[0]), y=sy(p[1]); g.fillStyle=css('--ink'); g.beginPath(); g.arc(x,y,4,0,6.3); g.fill(); const right=x>W*0.86; g.textAlign=right?'right':'left'; g.fillText(k.nombre,right?x-8:x+8,y-6); });
 }, resize(){ this.enter(); }};
 
@@ -534,7 +534,7 @@ hooks.funnel={step(s){ const sl=slides[cur];
     const t=txt(svg,x0+i*cs+cs/2,y0+n*cs+10,v,{'font-size':13,fill:css('--ink'),'text-anchor':'end',transform:`rotate(-45 ${x0+i*cs+cs/2} ${y0+n*cs+10})`}); });
   for(let i=0;i<n;i++) for(let j=0;j<n;j++){ const r=D.cor[i][j];
     const g=el('g',{},svg); const rc=el('rect',{x:x0+j*cs,y:y0+i*cs,width:cs-2,height:cs-2,rx:3,fill:i===j?css('--line'):col(r)},g);
-    txt(g,x0+j*cs+cs/2-1,y0+i*cs+cs/2+4,i===j?'':fmt(r,2).replace('0,',','),{'text-anchor':'middle','font-size':11.5,'font-family':'IBM Plex Mono',fill:r>0.66?'#fff':css('--ink'),'pointer-events':'none'});
+    txt(g,x0+j*cs+cs/2-1,y0+i*cs+cs/2+4,i===j?'':fmt(r,2).replace('0,',','),{'text-anchor':'middle','font-size':11.5,'font-family':'Montserrat',fill:r>0.66?'#fff':css('--ink'),'pointer-events':'none'});
     if(i!==j){ rc.addEventListener('mouseenter',()=>showPair(i,j)); rc.addEventListener('click',()=>showPair(i,j)); } }
   let ready=false;
   window.showPair=function(i,j){ document.getElementById('pairLbl').innerHTML=`<b style="color:var(--ink)">${D.vars[j]} × ${D.vars[i]}</b> · r = ${fmt(D.cor[i][j],2)} · 1.500 jugadores al azar`;
@@ -548,10 +548,10 @@ hooks.funnel={step(s){ const sl=slides[cur];
 (function(){ const svg=document.getElementById('stdSvg'), L=170, W=640, bh=34, gap=10; const mx=20;
   const ord=D.vars.map((v,i)=>i).sort((a,b)=>D.contrib_sin[b]-D.contrib_sin[a]);
   const sc=v=>v/mx*W; const rects=[], vals=[];
-  for(let t=0;t<=20;t+=5){ el('line',{x1:L+sc(t),x2:L+sc(t),y1:0,y2:ord.length*(bh+gap),stroke:css('--line')},svg); txt(svg,L+sc(t),ord.length*(bh+gap)+18,t+' %',{'text-anchor':'middle','font-size':13,fill:css('--muted'),'font-family':'IBM Plex Mono'}); }
+  for(let t=0;t<=20;t+=5){ el('line',{x1:L+sc(t),x2:L+sc(t),y1:0,y2:ord.length*(bh+gap),stroke:css('--line')},svg); txt(svg,L+sc(t),ord.length*(bh+gap)+18,t+' %',{'text-anchor':'middle','font-size':13,fill:css('--muted'),'font-family':'Montserrat'}); }
   ord.forEach((i,k)=>{ const y=k*(bh+gap); txt(svg,L-10,y+bh/2+5,D.vars[i],{'text-anchor':'end','font-size':16,fill:css('--ink')});
     const r=el('rect',{x:L,y,height:bh,width:0,rx:4,fill:GOL.has(D.vars[i])?css('--gol'):JUE.has(D.vars[i])?css('--juego'):css('--accent'),class:'bar-anim'},svg); r.style.transition='width .9s cubic-bezier(.2,.8,.2,1)';
-    const t=txt(svg,L+6,y+bh/2+5,'',{'font-size':14,'font-family':'IBM Plex Mono',fill:css('--ink')}); rects.push([r,t,i]); });
+    const t=txt(svg,L+6,y+bh/2+5,'',{'font-size':14,'font-family':'Montserrat',fill:css('--ink')}); rects.push([r,t,i]); });
   el('line',{x1:L+sc(10),x2:L+sc(10),y1:-4,y2:ord.length*(bh+gap),stroke:css('--ink'),'stroke-dasharray':'5 5'},svg);
   function set(which){ const src=which==='sin'?D.contrib_sin:D.contrib_con; rects.forEach(([r,t,i])=>{ r.setAttribute('width',sc(src[i])); r.style.width=sc(src[i])+'px'; t.setAttribute('x',L+sc(src[i])+8); t.textContent=fmt(src[i],1)+' %'; });
     document.getElementById('stdSin').classList.toggle('on',which==='sin'); document.getElementById('stdCon').classList.toggle('on',which==='con'); }
@@ -562,16 +562,16 @@ hooks.funnel={step(s){ const sl=slides[cur];
 /* ---------- 8 Codo ---------- */
 (function(){ const svg=document.getElementById('screeSvg'), L=60, B=410, W=800, H=360, n=10, bw=W/n*0.62, mx=8;
   const sx=i=>L+(i+0.5)*W/n, sy=v=>B-v/mx*H;
-  for(let t=0;t<=8;t+=2){ el('line',{x1:L,x2:L+W,y1:sy(t),y2:sy(t),stroke:css('--line')},svg); txt(svg,L-10,sy(t)+5,t,{'text-anchor':'end','font-size':14,fill:css('--muted'),'font-family':'IBM Plex Mono'}); }
+  for(let t=0;t<=8;t+=2){ el('line',{x1:L,x2:L+W,y1:sy(t),y2:sy(t),stroke:css('--line')},svg); txt(svg,L-10,sy(t)+5,t,{'text-anchor':'end','font-size':14,fill:css('--muted'),'font-family':'Montserrat'}); }
   const bars=D.eig.map((v,i)=>{ const r=el('rect',{x:sx(i)-bw/2,y:B,width:bw,height:0,rx:3,fill:i<2?css('--accent'):css('--faint')},svg); r.style.transition='all .5s ease '+(i*0.13)+'s';
     txt(svg,sx(i),B+22,'CP'+(i+1),{'text-anchor':'middle','font-size':14,fill:css('--ink')});
-    const t=txt(svg,sx(i),B-6,'',{'text-anchor':'middle','font-size':13,'font-family':'IBM Plex Mono',fill:css('--ink')}); t.style.transition='opacity .4s ease '+(i*0.13+.3)+'s'; return [r,t,v]; });
+    const t=txt(svg,sx(i),B-6,'',{'text-anchor':'middle','font-size':13,'font-family':'Montserrat',fill:css('--ink')}); t.style.transition='opacity .4s ease '+(i*0.13+.3)+'s'; return [r,t,v]; });
   const pl=el('polyline',{points:D.eig.map((v,i)=>sx(i)+','+sy(v)).join(' '),fill:'none',stroke:css('--ink'),'stroke-width':2},svg); pl.style.transition='opacity .6s ease 1.5s';
   const kl=el('line',{x1:L,x2:L+W,y1:sy(1),y2:sy(1),stroke:css('--bad'),'stroke-width':2,'stroke-dasharray':'7 6'},svg); kl.style.transition='opacity .5s ease 1.8s';
-  const kt=txt(svg,L+W,sy(1)-8,'Kaiser: autovalor = 1',{'text-anchor':'end','font-size':14,fill:css('--bad'),'font-family':'IBM Plex Mono'}); kt.style.transition='opacity .5s ease 1.8s';
+  const kt=txt(svg,L+W,sy(1)-8,'Kaiser: autovalor = 1',{'text-anchor':'end','font-size':14,fill:css('--bad'),'font-family':'Montserrat'}); kt.style.transition='opacity .5s ease 1.8s';
   const br=el('g',{},svg); br.style.transition='opacity .5s ease 2.2s'; el('path',{d:`M${sx(0)-bw/2} ${sy(7.75)} v-10 H${sx(1)+bw/2} v10`,fill:'none',stroke:css('--accent'),'stroke-width':2},br);
   txt(br,sx(1)+bw/2+14,sy(7.75)-4,'Retenemos 2 · 82,6 %',{'text-anchor':'start','font-size':16,'font-weight':600,fill:css('--accent')});
-  txt(br,sx(1)+bw/2+8,sy(0.98)-26,'0,98: casi 1',{'font-size':14,fill:css('--ink'),'font-family':'IBM Plex Mono'});
+  txt(br,sx(1)+bw/2+8,sy(0.98)-26,'0,98: casi 1',{'font-size':14,fill:css('--ink'),'font-family':'Montserrat'});
   hooks.scree={enter(){ const fade=[pl,kl,kt,br];
     bars.forEach(([r,t])=>{ r.style.transition='none'; r.style.y=B+'px'; r.style.height='0px'; t.style.opacity=0; }); fade.forEach(f=>{f.style.transitionDuration='0s'; f.style.opacity=0;});
     requestAnimationFrame(()=>requestAnimationFrame(()=>{ bars.forEach(([r,t,v],i)=>{ r.style.transition='all .5s ease '+(i*0.13)+'s'; r.style.y=sy(v)+'px'; r.style.height=(B-sy(v))+'px'; t.textContent=fmt(v,2); t.setAttribute('y',sy(v)-6); t.style.opacity=1; }); fade.forEach(f=>{ f.style.transitionDuration=''; f.style.opacity=1; }); })); }};
@@ -601,7 +601,7 @@ hooks.funnel={step(s){ const sl=slides[cur];
   const svg=document.getElementById('circle'), R=140;
   el('circle',{cx:0,cy:0,r:R,fill:'none',stroke:css('--line'),'stroke-width':1.5},svg);
   el('line',{x1:-R-8,x2:R+8,y1:0,y2:0,stroke:css('--line')},svg); el('line',{y1:-R-8,y2:R+8,x1:0,x2:0,stroke:css('--line')},svg);
-  txt(svg,R-2,-6,'CP1',{'text-anchor':'end','font-size':11,fill:css('--accent'),'font-family':'IBM Plex Mono'}); txt(svg,4,-R+12,'CP2',{'font-size':11,fill:css('--juego'),'font-family':'IBM Plex Mono'});
+  txt(svg,R-2,-6,'CP1',{'text-anchor':'end','font-size':11,fill:css('--accent'),'font-family':'Montserrat'}); txt(svg,4,-R+12,'CP2',{'font-size':11,fill:css('--juego'),'font-family':'Montserrat'});
   el('defs',{},svg).innerHTML='<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker>';
   const arrows=D.vars.map((v,i)=>{ const x=D.load[i][0]*R, y=-D.load[i][1]*R, bad=v==='Centros'; const c=bad?css('--bad'):GOL.has(v)?css('--gol'):JUE.has(v)?css('--juego'):css('--accent');
     const ln=el('line',{x1:0,y1:0,x2:x,y2:y,stroke:c,'stroke-width':bad?3:2,'marker-end':'url(#ah)'},svg); const len=Math.hypot(x,y); ln.style.strokeDasharray=len; ln.style.strokeDashoffset=len;
@@ -619,9 +619,9 @@ hooks.funnel={step(s){ const sl=slides[cur];
   D.vars.forEach(v=>{ const c=document.createElement('div'); c.className='vchip'; c.innerHTML=`<span class="n">${v}</span><div class="ld"><div class="ldb"><i style="background:var(--gol)"></i><span></span></div><div class="ldb"><i style="background:var(--juego)"></i><span></span></div></div><span class="why"></span>`; box.appendChild(c); chips[v]=c; });
   const svg=document.getElementById('detSvg'), L=20, W=380, lg=v=>Math.log10(v), sx=v=>L+(lg(v)+6)/4*W;
   el('rect',{x:L,y:50,width:W,height:26,rx:13,fill:css('--accent-soft')},svg); el('rect',{x:L,y:50,width:sx(1e-5)-L,height:26,rx:13,fill:'#f5dde2'},svg);
-  [1e-6,1e-5,1e-4,1e-3,1e-2].forEach(v=>{ txt(svg,sx(v),100,v.toExponential(0).replace('e-','·10⁻').replace('1·',''),{'text-anchor':'middle','font-size':13,'font-family':'IBM Plex Mono',fill:css('--muted')}); });
-  el('line',{x1:sx(1e-5),x2:sx(1e-5),y1:40,y2:86,stroke:css('--bad'),'stroke-width':2.5},svg); txt(svg,sx(1e-5),32,'umbral 0,00001',{'text-anchor':'middle','font-size':13,fill:css('--bad'),'font-family':'IBM Plex Mono'});
-  const ptr=el('g',{},svg); ptr.style.transition='transform .8s cubic-bezier(.2,.8,.2,1)'; el('circle',{cx:0,cy:63,r:11,fill:css('--ink')},ptr); const pv=txt(ptr,0,135,'',{'text-anchor':'middle','font-size':15,'font-weight':600,'font-family':'IBM Plex Mono',fill:css('--ink')});
+  [1e-6,1e-5,1e-4,1e-3,1e-2].forEach(v=>{ txt(svg,sx(v),100,v.toExponential(0).replace('e-','·10⁻').replace('1·',''),{'text-anchor':'middle','font-size':13,'font-family':'Montserrat',fill:css('--muted')}); });
+  el('line',{x1:sx(1e-5),x2:sx(1e-5),y1:40,y2:86,stroke:css('--bad'),'stroke-width':2.5},svg); txt(svg,sx(1e-5),32,'umbral 0,00001',{'text-anchor':'middle','font-size':13,fill:css('--bad'),'font-family':'Montserrat'});
+  const ptr=el('g',{},svg); ptr.style.transition='transform .8s cubic-bezier(.2,.8,.2,1)'; el('circle',{cx:0,cy:63,r:11,fill:css('--ink')},ptr); const pv=txt(ptr,0,135,'',{'text-anchor':'middle','font-size':15,'font-weight':600,'font-family':'Montserrat',fill:css('--ink')});
   const out=['Regate','Efecto','Visión'];
   hooks.dep={step(s){ const st=D.afe_steps[s];
     D.vars.forEach(v=>{ const c=chips[v], k=st.vars.indexOf(v), gone=out.slice(0,s).includes(v); c.classList.toggle('out',gone);
@@ -642,7 +642,7 @@ hooks.funnel={step(s){ const sl=slides[cur];
   for(const r of [.25,.5,.75,1]) el('path',{d:`M0 ${-r*S} A${r*S} ${r*S} 0 0 1 0 ${r*S}`,fill:'none',stroke:css('--line')},svg);
   el('line',{x1:0,x2:S*1.1,y1:0,y2:0,stroke:css('--line')},svg); el('line',{x1:0,x2:0,y1:-S,y2:S,stroke:css('--line')},svg);
   el('defs',{},svg).innerHTML='<marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker>';
-  const arc=el('path',{fill:'none',stroke:css('--muted'),'stroke-width':1.5},svg), arcT=txt(svg,0,0,'',{'font-size':18,'font-family':'IBM Plex Mono',fill:css('--muted'),'text-anchor':'middle'});
+  const arc=el('path',{fill:'none',stroke:css('--muted'),'stroke-width':1.5},svg), arcT=txt(svg,0,0,'',{'font-size':18,'font-family':'Montserrat',fill:css('--muted'),'text-anchor':'middle'});
   const ax1=el('line',{x1:0,y1:0,stroke:css('--gol'),'stroke-width':5,'marker-end':'url(#ah2)'},svg), ax2=el('line',{x1:0,y1:0,stroke:css('--juego'),'stroke-width':5,'marker-end':'url(#ah2)'},svg);
   const t1=txt(svg,0,0,'',{'font-size':19,'font-weight':600,fill:css('--gol')}), t2=txt(svg,0,0,'',{'font-size':19,'font-weight':600,fill:css('--juego')});
   D.vars.forEach((v,i)=>{ const x=A[i][0]*S, y=-A[i][1]*S, c=GOL.has(v)?css('--gol'):css('--juego'); el('circle',{cx:x,cy:y,r:8,fill:c,stroke:'#fff','stroke-width':2},svg); txt(svg,x+13,y+5,v,{'font-size':15,fill:css('--ink')}); });
@@ -674,7 +674,7 @@ hooks.funnel={step(s){ const sl=slides[cur];
       xaxis:{title:{text:'Juego asociado →',font:{color:css('--juego')}},zerolinecolor:css('--faint'),gridcolor:css('--line'),range:[-4.3,4.4]},yaxis:{title:{text:'Capacidad goleadora →',font:{color:css('--gol')}},zerolinecolor:css('--faint'),gridcolor:css('--line')}},PLOTCFG); }
   const svg=document.getElementById('alphaSvg'), L=30, W=380, sx=v=>L+(v-.6)/.4*W;
   [[.6,.7,'#eef1f5','débil'],[.7,.8,'#e3eaf4','aceptable'],[.8,.9,'#cdd9ea','bueno'],[.9,1,'#f6e7c8','redundante']].forEach(([a,b,c,l])=>{ el('rect',{x:sx(a),y:70,width:sx(b)-sx(a),height:30,fill:c},svg); txt(svg,(sx(a)+sx(b))/2,90,l,{'text-anchor':'middle','font-size':13,fill:css('--ink')}); });
-  [.6,.7,.8,.9,1].forEach(v=>txt(svg,sx(v),120,fmt(v,1),{'text-anchor':'middle','font-size':12,'font-family':'IBM Plex Mono',fill:css('--muted')}));
+  [.6,.7,.8,.9,1].forEach(v=>txt(svg,sx(v),120,fmt(v,1),{'text-anchor':'middle','font-size':12,'font-family':'Montserrat',fill:css('--muted')}));
   const mk=[[.844,'Juego asociado 0,84',css('--juego'),40],[.948,'Goleadora 0,95',css('--gol'),160]].map(([v,l,c,ty])=>{ const g=el('g',{},svg); el('line',{x1:sx(v),x2:sx(v),y1:ty<100?ty+8:105,y2:ty<100?70:ty-16,stroke:c,'stroke-width':3},g); el('circle',{cx:sx(v),cy:ty<100?ty+8:ty-16,r:5,fill:c},g); txt(g,sx(v),ty<100?ty-2:ty+4,l,{'text-anchor':'middle','font-size':14,'font-weight':600,fill:c}); g.dataset.v=v; return g; });
   hooks.fac={enter(){ if(!ready){ build(); ready=true; } else Plotly.Plots.resize('facPlot');
     mk.forEach((g,i)=>{ g.style.transition='none'; g.style.transform=`translateX(${sx(.6)-sx(+g.dataset.v)}px)`; g.style.opacity=0; });
@@ -687,7 +687,7 @@ hooks.funnel={step(s){ const sl=slides[cur];
   const sy=h=>B-(h/H)*(B-T)*0.97; let leaves=[]; (function walk(n){ if(n.children){ n.children.forEach(walk);} else leaves.push(n); })(D.dendro);
   const step=(R-L)/leaves.length; leaves.forEach((n,i)=>n._x=L+step*(i+.5));
   (function pos(n){ if(n.children){ n.children.forEach(pos); n._x=(n.children[0]._x+n.children[1]._x)/2; } })(D.dendro);
-  for(let t=0;t<=400;t+=100){ el('line',{x1:L,x2:R,y1:sy(t),y2:sy(t),stroke:css('--line')},svg); txt(svg,L-8,sy(t)+5,t,{'text-anchor':'end','font-size':13,'font-family':'IBM Plex Mono',fill:css('--muted')}); }
+  for(let t=0;t<=400;t+=100){ el('line',{x1:L,x2:R,y1:sy(t),y2:sy(t),stroke:css('--line')},svg); txt(svg,L-8,sy(t)+5,t,{'text-anchor':'end','font-size':13,'font-family':'Montserrat',fill:css('--muted')}); }
   txt(svg,14,(T+B)/2,'altura',{'font-size':13,fill:css('--muted'),transform:`rotate(-90 14 ${(T+B)/2})`,'text-anchor':'middle'});
   const segs=[]; (function draw(n){ if(!n.children) return; const [a,b]=n.children, ya=a.children?sy(a.h):B, yb=b.children?sy(b.h):B, y=sy(n.h);
     const p=el('path',{d:`M${a._x} ${ya} V${y} H${b._x} V${yb}`,fill:'none','stroke-width':2.2},svg); segs.push([p,n]); draw(a); draw(b); })(D.dendro);
@@ -717,7 +717,7 @@ hooks.funnel={step(s){ const sl=slides[cur];
     const c=document.createElement('div'); c.className='cc'; c.style.setProperty('--c',CLC[i]);
     c.innerHTML=`<div class="t">${n}</div><div class="s">${D.cl_sizes[i].toLocaleString('es-AR')} jugadores (${fmt(100*D.cl_sizes[i]/tot,1)} %) · media ${fmt(media,0)} · ${D.cl_pos[i][0]} % defensores</div><div class="crk">${crk}</div>`; box.appendChild(c); });
   const svg=document.getElementById('profSvg'), L=50, R=880, T=14, B=240, sx=i=>L+i*(R-L)/9, sy=z=>T+(1.6-z)/3.2*(B-T);
-  [-1.5,-1,-.5,0,.5,1,1.5].forEach(z=>{ el('line',{x1:L,x2:R,y1:sy(z),y2:sy(z),stroke:z===0?css('--faint'):css('--line'),'stroke-dasharray':z===0?'4 4':''},svg); txt(svg,L-8,sy(z)+4,fmt(z,1),{'text-anchor':'end','font-size':12,'font-family':'IBM Plex Mono',fill:css('--muted')}); });
+  [-1.5,-1,-.5,0,.5,1,1.5].forEach(z=>{ el('line',{x1:L,x2:R,y1:sy(z),y2:sy(z),stroke:z===0?css('--faint'):css('--line'),'stroke-dasharray':z===0?'4 4':''},svg); txt(svg,L-8,sy(z)+4,fmt(z,1),{'text-anchor':'end','font-size':12,'font-family':'Montserrat',fill:css('--muted')}); });
   D.vars.forEach((v,i)=>txt(svg,sx(i),B+22,v,{'text-anchor':'middle','font-size':13,fill:css('--ink')}));
   const lines=D.cl_prof_z.map((p,i)=>{ const pl=el('polyline',{points:p.map((z,j)=>sx(j)+','+sy(z)).join(' '),fill:'none',stroke:CLC[i],'stroke-width':3.5,'stroke-linejoin':'round'},svg); p.forEach((z,j)=>el('circle',{cx:sx(j),cy:sy(z),r:4,fill:CLC[i]},svg)); return pl; });
   txt(svg,R,T+8,'media estandarizada (z) de cada atributo',{'text-anchor':'end','font-size':12,fill:css('--muted')});
@@ -730,12 +730,12 @@ hooks.funnel={step(s){ const sl=slides[cur];
   const ord=hv.order.map(i=>i-1), yOf={}; ord.forEach((i,k)=>yOf[-(i+1)]=T+(k+.5)*(B-T)/n);
   const sx=h=>R-(h/mx)*(R-L); const col={}, members={};
   ord.forEach(i=>{ members[-(i+1)]=[hv.labels[i]]; txt(svg,R+10,yOf[-(i+1)]+5,hv.labels[i],{'font-size':16,fill:blk(hv.labels[i]),'font-weight':600}); });
-  for(let t=0;t<=0.4;t+=0.1){ el('line',{x1:sx(t),x2:sx(t),y1:T,y2:B,stroke:css('--line')},svg); txt(svg,sx(t),B+20,fmt(t,1),{'text-anchor':'middle','font-size':12,'font-family':'IBM Plex Mono',fill:css('--muted')}); }
+  for(let t=0;t<=0.4;t+=0.1){ el('line',{x1:sx(t),x2:sx(t),y1:T,y2:B,stroke:css('--line')},svg); txt(svg,sx(t),B+20,fmt(t,1),{'text-anchor':'middle','font-size':12,'font-family':'Montserrat',fill:css('--muted')}); }
   txt(svg,(L+R)/2,B+40,'1 − correlación',{'text-anchor':'middle','font-size':13,fill:css('--muted')});
   const paths=[]; hv.merge.forEach((m,k)=>{ const a=m[0]<0?m[0]:m[0], b=m[1]; const ya=yOf[a], yb=yOf[b], xa=a<0?R:sx(hv.height[a-1]), xb=b<0?R:sx(hv.height[b-1]), x=sx(hv.height[k]);
     const mem=members[a].concat(members[b]); members[k+1]=mem; yOf[k+1]=(ya+yb)/2; const cs=new Set(mem.map(blk)); const c=cs.size===1?[...cs][0]:css('--ink');
     const p=el('path',{d:`M${xa} ${ya} H${x} V${yb} H${xb}`,fill:'none',stroke:c,'stroke-width':3},svg); paths.push(p);
-    if(k===0) txt(svg,x-8,(ya+yb)/2-8,'r = 0,86',{'text-anchor':'end','font-size':13,'font-family':'IBM Plex Mono',fill:css('--gol')}); });
+    if(k===0) txt(svg,x-8,(ya+yb)/2-8,'r = 0,86',{'text-anchor':'end','font-size':13,'font-family':'Montserrat',fill:css('--gol')}); });
   hooks.bloques={enter(){ paths.forEach((p,i)=>{ const l=p.getTotalLength(); p.style.transition='none'; p.style.strokeDasharray=l; p.style.strokeDashoffset=l; requestAnimationFrame(()=>requestAnimationFrame(()=>{ p.style.transition=`stroke-dashoffset .5s ease ${i*.22}s`; p.style.strokeDashoffset=0; })); }); }};
 })();
 
@@ -749,7 +749,7 @@ hooks.funnel={step(s){ const sl=slides[cur];
         text:idx.map(i=>C.cos2[i]<.15?'':lbl(C.name[i])),textfont:{size:14,color:css('--ink'),family:FF},marker:{size:13,color:VC[v],opacity:idx.map(i=>C.cos2[i]<.15?.3:.95)},hovertemplate:'%{hovertext}<br>cos2 = %{customdata}<extra></extra>',customdata:idx.map(i=>fmt(C.cos2[i],2))}); });
     const S=D.acm_sup; tr.push({type:'scatter',mode:'markers+text',name:'Clusters y liga (suplementarias)',x:S.x,y:S.y,text:S.name.map(n=>/Liga_nivel[12]$/.test(n)?'':lbl(n)),hovertext:S.name.map(lbl),textposition:'bottom center',textfont:{size:12.5,color:css('--muted'),family:FF},marker:{size:11,symbol:'diamond',color:'#fff',line:{color:css('--muted'),width:2}},hoverinfo:'text'});
     tr.push({type:'scatter',mode:'markers',name:'Los 4 jugadores',x:D.cracks_acm.map(c=>c[0]),y:D.cracks_acm.map(c=>c[1]),text:D.cracks.map(c=>c.nombre),marker:{size:14,symbol:'star',color:css('--ink')},hoverinfo:'text'});
-    const an=(x,y,t,xa,ya)=>({x,y,xref:'paper',yref:'paper',text:t,showarrow:false,font:{size:13,color:css('--accent'),family:'IBM Plex Mono, monospace'},xanchor:xa,yanchor:ya});
+    const an=(x,y,t,xa,ya)=>({x,y,xref:'paper',yref:'paper',text:t,showarrow:false,font:{size:13,color:css('--accent'),family:FF},xanchor:xa,yanchor:ya});
     const crA=D.cracks.map((c,i)=>({x:D.cracks_acm[i][0],y:D.cracks_acm[i][1],text:'<b>'+c.nombre+'</b>',showarrow:true,arrowhead:0,arrowwidth:1.2,arrowcolor:css('--ink'),font:{size:15,color:css('--ink'),family:FF},ax:[60,-60,-70,-60][i],ay:[-40,-10,-40,30][i]}));
     Plotly.newPlot('acmPlot',tr,{margin:{l:50,r:14,t:10,b:44},font:FONT,paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',showlegend:true,legend:{orientation:'h',y:-0.13,x:0,font:{size:12}},
       xaxis:{title:{text:'Dim 1 · experiencia y jerarquía (14,8 %)'},zerolinecolor:css('--faint'),gridcolor:css('--line'),range:[-1.35,1.35]},yaxis:{title:{text:'Dim 2 · rol en la cancha (13,0 %)'},zerolinecolor:css('--faint'),gridcolor:css('--line'),range:[-1.85,2.15]},
